@@ -1,0 +1,22 @@
+body {
+	margin: 0;
+	padding: 0;
+	border: 1px solid LightGrey;
+	width: 760px;
+	height: 470px;
+}
+
+#img_logo {
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	left: 300px;
+	top: 200px;
+}
+
+#img_title {
+	position: absolute;
+	left: 60px;
+	top: 20px;
+	display: none;	
+}
