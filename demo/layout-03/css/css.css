@@ -8,15 +8,17 @@ body {
 
 #img_logo {
 	position: absolute;
-	width: 200px;
-	height: 100px;
-	left: 300px;
-	top: 200px;
+	width: 482px;
+	height: 211px;
+	left: 139px; /* ( 760 - 482 ) / 2 */
+	top: 129px; /* ( 470 - 211 ) / 2 */
 }
 
 #img_title {
 	position: absolute;
-	left: 60px;
-	top: 20px;
+	width: 522px;
+	height: 57px;
+	left: 119px; /* ( 760 - 522 ) / 2 */
+	top: 82px; /* ( 470 - 57 ) / 5 */
 	display: none;	
 }

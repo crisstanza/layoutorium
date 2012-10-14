@@ -4,11 +4,11 @@
 	var SCREEN_SELECT_LEVEL = 2;
 	var SCREEN_GAME = 3;
 	//
-	var DELAY_SCREEN_CHANGE = 1500;
-	var DELAY_OBJECTS_CHANGE = 250;
+	var DELAY_SCREEN_CHANGE = 1500 * 1;
+	var DELAY_OBJECTS_CHANGE = 250 * 1;
 	//
 	var logger = {
-		log: true,
+		log: false,
 		console: {
 			log: function(msg) {
 				if ( logger.log ) {
@@ -30,12 +30,12 @@
 		//
 		if ( screen == SCREEN_OPENING ) {
 			imgLogo.animate(
-				{ left: 300, top: 200, width: 200, height: 100 },
+				{ left: 139, top: 129, width: 482, height: 211 },
 				{ duration: DELAY_OBJECTS_CHANGE }
 			);		
 		} else if ( screen == SCREEN_SELECT_LEVEL ) {
 			imgLogo.animate(
-				{ left: 20, top: 50, width: 50, height: 25 },
+				{ left: 22, top: 22, width: 482/4, height: 211/4 },
 				{ duration: DELAY_OBJECTS_CHANGE }
 			);
 		}
@@ -73,7 +73,7 @@
 		//
 		logger.console.log('init()');
 		//
-		setTimeout(function() { goToScreen(SCREEN_SELECT_LEVEL); }, DELAY_SCREEN_CHANGE );
+		goToScreen(SCREEN_OPENING);
 	}
 	//
 	$(document).ready(init);
