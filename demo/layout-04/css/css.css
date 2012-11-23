@@ -1,0 +1,11 @@
+div.test {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	margin: auto;
+
+	box-shadow: 0 0 5px 5px #888;
+	/* box-shadow: 0 0 5px #888; */
+
+	background: -moz-radial-gradient(50% 50%, circle closest-side, #CCC, #FFF 99%);
+}
