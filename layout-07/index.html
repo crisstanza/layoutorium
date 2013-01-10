@@ -9,6 +9,7 @@
 				display: block;
 				border: 1px solid gray;
 				padding: 20px;
+				width: 250px;
 			}
 			div.my-flip-1 {
 				transition: all 0.25s linear;
@@ -26,7 +27,10 @@
 						function click(sender) {
 							var myDiv = document.getElementById('my-div');
 							myDiv.setAttribute('class', 'my-flip-1');
-							setTimeout(function() { myDiv.setAttribute('class', 'my-flip-2'); }, 250);
+							setTimeout(function() {
+								myDiv.innerHTML = 'new content! ' + new Date().getTime();
+								myDiv.setAttribute('class', 'my-flip-2');
+							}, 250);
 						}
 						var myButton = document.getElementById('my-button');
 						myButton.addEventListener('click', click, false);					
