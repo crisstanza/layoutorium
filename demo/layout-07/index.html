@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>layout 07 - flip to change contents</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css">
+			div {
+				float: left;
+				display: block;
+				border: 1px solid gray;
+				padding: 20px;
+			}
+			div.my-flip-1 {
+				transition: all 0.25s linear;
+				transform: rotateY(90deg);
+			}
+			div.my-flip-2 {
+				transition: all 0.25s linear;
+				transform: rotateY(0deg);
+			}
+		</style>
+		<script type="text/javascript">
+			(function() {
+				function init() {
+					(function() {
+						function click(sender) {
+							var myDiv = document.getElementById('my-div');
+							myDiv.setAttribute('class', 'my-flip-1');
+							setTimeout(function() { myDiv.setAttribute('class', 'my-flip-2'); }, 250);
+						}
+						var myButton = document.getElementById('my-button');
+						myButton.addEventListener('click', click, false);					
+					})();
+				}
+				window.addEventListener('load', init, false);
+			})();
+		</script>
+	</head>
+	<body>
+
+		<button id="my-button">go!</button><br />
+		<br />
+		<div id="my-div" class="my-flip">
+			&clubs; This is a test.
+		</div>
+
+	</body>
+</html>
